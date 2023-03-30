@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+// import {Link} from "react-router-dom"
+// import 
 
 
 const Navbar = () => {
@@ -41,7 +43,8 @@ flex-direction: column;
 justify-content:center;
 align-items: center;
 margin: 35px 0 0 0;
-background-color: #ffffff;`
+background-color: #ffffff;
+`
 
 const Hr = styled.hr`
 width: 100%;
@@ -87,18 +90,10 @@ padding: 20px;
 cursor: pointer;
 
 &:hover {
-    border-bottom: 2px solid transparent !important;
-    padding-bottom: 3px;
-    animation: animated 2s linear;
-    
-    @keyframes animated {
-    0%{
-        border-bottom: 2px solid transparent !;
-    }
-    20%{
-        border-bottom: 2px solid #3f3f3f;
-    }
-    }
+    text-decoration:underline;
+    text-underline-offset: 25px;
+    text-decoration-thickness: 3px;
+
 }`
 
 const SearchLogo = styled.div`
