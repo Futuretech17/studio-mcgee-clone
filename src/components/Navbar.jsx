@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
+// import {Link} from "react-router-dom"
+// import 
 
 
 const Navbar = () => {
@@ -87,6 +88,11 @@ a{
     line-height: 16px;
     font-style: normal;
     letter-spacing: 1.94px;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    }
 }
 `
 
@@ -119,7 +125,7 @@ const Img = styled.img`
 cursor:pointer;
 
 &:hover {
-    filter: blur(0.4px);
+    opacity:0.8;
 }`
 
 
