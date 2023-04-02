@@ -1,6 +1,14 @@
 body{
     margin:0;
     font-family: forma-djr-text, serif;
-    background-color: #f9f9f9;
+    background-color: #f8f7f3 ;
+    width: 100vw;
+    overflow: hidden;
+
+@media  (max-width: 992px){
+    body{
+        max-width: 100%;
+    }
+}
     
 }
