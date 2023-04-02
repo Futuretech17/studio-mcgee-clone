@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import {Link} from "react-router-dom"
-// import 
+
 
 
 const Navbar = () => {
@@ -24,7 +23,7 @@ const Navbar = () => {
         <Logo > <Img src="https://studio-mcgee.com/app/themes/studio-mcgee/dist/images/logo_b53b4862.svg" alt=""/>      
         </Logo>  
         <Navmenu>
-        <NavLink to = "/lifestyle"><span>Lifestyle</span></NavLink>
+        <NavLink to = "./pages/lifestyle"><span>Lifestyle</span></NavLink>
         <NavLink to = "/design"><span>Design</span></NavLink>
         <NavLink to = "/the-studio"><span>The Studio</span></NavLink>
         <NavLink to = "/netflix-show"><span>Netflix Show</span></NavLink>
@@ -103,9 +102,11 @@ const Nav = styled.nav`
 display:flex;
 flex-direction:row;
 justify-content: space-between;
-width:95%;
+width:100%;
 height: 56px;
-background-color: #ffffff;`
+background-color: #ffffff;
+padding-left: 30px;`
+
 
 const Logo = styled.div`
 display:flex;
@@ -131,6 +132,7 @@ min-width:700px;
 width:50vw;
 white-space:nowrap;
 max-width:100vw;
+cursor:pointer;
 
 .hamburger {
     display: none;
@@ -168,11 +170,11 @@ max-width:100vw;
     letter-spacing: 1.94px;
     @media (max-width: 992px) {
         position:absolute;
-        right: 20px;
+        right: 30px;
 
     }
   
-`
+}`
 
 const NavLink = styled.a` 
 
@@ -198,8 +200,8 @@ const NavLink = styled.a`
     content: "";
     position: absolute;
     width: 0;
-    height: 2px;
-    bottom: -15px;
+    height: 3px;
+    bottom: -20px;
     left: 0;
     background-color: #474747;
     transition: width 0.3s ease-in-out;
