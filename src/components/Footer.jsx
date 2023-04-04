@@ -67,8 +67,7 @@ const Footer = () => {
                         
                     </div>
                     <div className='thirddiv'>
-                        <p>@ STUDIO MCGEE</p>
-                        <p>MADE BY BENJIE</p>
+                        <p>@ STUDIO MCGEE <span>  |  </span> MADE BY BENJIE</p>
                     </div>
                 </SocialLinks>
             </FooterContent>
@@ -126,7 +125,7 @@ form {
 `
 const Hr = styled.hr`
 width: 100%;
-height: 1.5px;
+height: 1.6px;
 background-color: #ffffff;
 margin:0;`
 
@@ -138,6 +137,18 @@ flex-direction: row;
 color:#ececec;
 margin-right: 15px;
 margin-left: 15px;
+margin-top: 30px;
+
+h3 {
+    font-family: GT, serif;
+    font-size:19px;
+    font-weight:500px;
+    color:#ececec;
+    margin-left:30px;
+    margin-bottom:20px;
+    transform: scale(1, 1.2);
+    letter-spacing: 1.2px;
+}
 
 ul {
 
@@ -145,6 +156,12 @@ ul {
 
 ul li {
     list-style-type: none;
+    font-family: forma-djr-text,sans-serif;
+    font-size:10px;
+    font-weight: 500;
+    line-height:18px;
+    color:#ececec;
+    letter-spacing:1.94px;
     
 }`
 
@@ -153,28 +170,39 @@ const TheStudio =styled.div`
 `
 const Articles = styled.div``
 const QuickLinks = styled.div``
+
 const SocialLinks = styled.div`
-display:flex;
+font-family: forma-djr-text,sans-serif;
+font-size: 10px;
+font-weight:400;
+line-height:16px;
+display: flex;
 flex-direction: column;
-align-items: space-between;
-height:100%;
+align-items:start;
+justify-content:space-between;
+margin-right: 30px;
+
 
 .firstdiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width:100%;
+    display:flex;
+    justify-content:space-between;
+    white-space:nowrap;
 
     img{
-        width: auto;
+        width: 50%;
         height: 15px;
         color:#d1d1d1;
+        font-size:16px;
     }
 
     a{
         color:#ececec;
         text-decoration: none;
+        margin-left: 10px;
+
+        &:hover{
+            opacity: 0.8;
+        }
     }
 
 }
@@ -192,6 +220,11 @@ height:100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    letter-spacing: 1.94px;
+
+    span{
+        padding: 0 5px;
+    }
   
 }
 

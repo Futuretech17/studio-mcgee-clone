@@ -11,8 +11,6 @@ const Navbar = () => {
     const year = d.getFullYear();
 
     return (
-
-        
         <Container>
         <Promotions>
             <a href='https://www.mcgeeandco.com/pages/the-outdoor-collection' >
