@@ -80,8 +80,6 @@ const Footer = () => {
 
 
 const FooterDiv =styled.div`
-position:fixed;
-bottom:0;
 display:flex;
 flex-direction:column;
 padding-bottom: 50px;
@@ -112,8 +110,7 @@ white-space: nowrap;
 }
 
 .firstImg{
-    position:absolute;
-    bottom: 0;
+    
     left:30px;
 }
 
