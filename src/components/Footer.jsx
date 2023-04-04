@@ -5,13 +5,16 @@ const Footer = () => {
     return (
         <FooterDiv className="footer">
             <FooterHeader>
-                <img src='https://studio-mcgee.com/app/themes/studio-mcgee/dist/images/StudioMcGeeWhite_2x_51b5f312.png' alt=''></img>
+                <img className="firstImg"src='https://studio-mcgee.com/app/themes/studio-mcgee/dist/images/StudioMcGeeWhite_2x_51b5f312.png' alt=''></img>
+                <div className='formImg'>
                 <form action=''>
-                <label for="">Join Our Mailing List</label>
+                <label className="formLabel" for="">Join Our Mailing List</label>
                 <input type='text' />
-                <label for="">Submit</label>
-                <input type='submit'/>
+                <label className="lastLabel" for="">SUBMIT</label>
+                <input type='hidden'></input>
                 </form>
+                <img className="footerHeaderImg"src='https://studio-mcgee.com/app/themes/studio-mcgee/dist/images/icon-arrow-white_ed904aba.svg' alt='' />
+                </div>
             </FooterHeader>
             <Hr />
             <FooterContent>
@@ -95,30 +98,84 @@ const FooterHeader = styled.div`
 
 display:flex;
 flex-direction: row;
-justify-content: space-between;
 align-items: center;
 width:100%;
 padding-right: 15px;
 padding-left: 15px;
-margin: 25px 30px;
+margin: 20px 30px 30px 30px;
+position:relative;
+white-space: nowrap;
 
+.formImg{
+    position:relative;
+    margin-left: 150px;
+}
+
+.firstImg{
+    position:absolute;
+    bottom: 0;
+    left:30px;
+}
+
+.footerHeaderImg {
+    margin-left: 15px;
+    padding:2px;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    
+    
+
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
 img{
     width: auto;
     height: 15px;
     color:#d1d1d1;
+    
+    
 }
 
 form {
+    margin-left: 100px;
     color:#ececec;
+    margin-right: 50px;
+
+    .formLabel{
+        font-family: GT, san-serif;
+        font-size:19px;
+        font-weight: normal;
+        line-height:19px;
+        letter-spacing: 1.2px;
+        transform: scale(1, 1.2);
+        margin-right: 20px;
+        vertical-align:bottom;
+    }
+    
+    .lastLabel {
+        margin-left: 20px;
+        font-family:forma-djr-text, sans-serif;
+        font-size:10px;
+        font-weight:500;
+        line-height:16px;
+        letter-spacing: 1.42px;
+        vertical-align:bottom;
+    }
+
     input[type=text] {
         border: none;
         border-bottom: 1px solid #ececec;
         background-color:#303030;
+        vertical-align:text-bottom;
     }
     input[type=submit] {
         border: none;
         border-bottom: 1px solid #ececec;
         background-color:#303030;
+        margin-left:20px;
 
     }
 }
