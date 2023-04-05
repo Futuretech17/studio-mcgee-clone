@@ -1,11 +1,24 @@
-import React from 'react';
+import React, {useState}from 'react';
 import styled from 'styled-components';
+import Navanimated from '../components/Navanimated';
+
 
 
 const Navbar = () => {
 
+    const [showDiv, setShowDiv] = useState(false);
+
+    const handleHover = () => {
+    setShowDiv(true);
+  };
+
+  const handleLeave = () => {
+    setShowDiv(false);
+  };
+
     const d = new Date();
     const year = d.getFullYear();
+
 
     return (
         <Container>
@@ -19,11 +32,11 @@ const Navbar = () => {
         <Logo > <Img src="https://studio-mcgee.com/app/themes/studio-mcgee/dist/images/logo_b53b4862.svg" alt=""/>      
         </Logo>  
         <Navmenu>
-        <NavLink to = "./pages/lifestyle"><span>Lifestyle</span></NavLink>
-        <NavLink to = "/design"><span>Design</span></NavLink>
-        <NavLink to = "/the-studio"><span>The Studio</span></NavLink>
+        <NavLink  onMouseOver={handleHover} onMouseLeave={handleLeave} to = "./pages/lifestyle"><span>Lifestyle</span></NavLink>
+        <NavLink  onMouseOver={handleHover} onMouseLeave={handleLeave}to = "/design"><span>Design</span></NavLink>
+        <NavLink  onMouseOver={handleHover} onMouseLeave={handleLeave}to = "/the-studio"><span>The Studio</span></NavLink>
         <NavLink to = "/netflix-show"><span>Netflix Show</span></NavLink>
-        <NavLink to = "/shop"><span>Shop</span></NavLink>
+        <NavLink onMouseOver={handleHover} onMouseLeave={handleLeave} to = "/shop"><span>Shop</span></NavLink>
         <NavLink to = "/videos"><span>Videos</span></NavLink>
         <NavLink to = "/contact"><span>Contact</span></NavLink>
 
@@ -45,7 +58,11 @@ const Navbar = () => {
          
         </Nav>
 
-        <Hr />      
+        <Hr />  
+        {showDiv && (<div style={{ display: "visible" }} className='.relativePosition'>
+            <Navanimated />
+            </div>    )}
+        
         </Container>
         
     )
@@ -57,10 +74,15 @@ flex-direction: column;
 justify-content:center;
 align-items: center;
 margin-top: 0;
-
-
 background-color:  #f8f7f3;
 
+.relativePosition {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
 `
 
